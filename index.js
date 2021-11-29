@@ -15,7 +15,7 @@ app.listen(3000, err => {
 
 
 
-app.get("/student/studentList", ( res) => {
+app.get("/student/studentList", ( req, res) => {
     fs.readFile("student.json" , function(err, data) {
         if(err) throw err;
         console.log("Read successfully");
