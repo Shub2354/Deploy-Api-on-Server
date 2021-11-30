@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const students = require('./student.json');
-const fs = require('fs');
 let port = process.env.Port || 3000;
 
 
@@ -11,11 +10,13 @@ app.listen(port, err => {
         console.log(err.message);
     }
     console.log('Server is running');
+});
+
+app.get("/", (req, res) => {
+    res.send("Working");
 })
 
-
-
-app.get("/student/studentList", ( req, res) => {
+app.get("/studentList", ( req, res) => {
    res.send(students);
     
-})
+});
