@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 const students = require('./student.json');
-let port = process.env.Port || 3000;
 
 
 
-app.listen(port, err => {
+
+app.listen(process.env.PORT || 5000, err => {
     if(err){
         console.log(err.message);
     }
