@@ -16,11 +16,6 @@ app.listen(port, err => {
 
 
 app.get("/student/studentList", ( req, res) => {
-    fs.readFile("student.json" , function(err, data) {
-        if(err) throw err;
-        console.log("Read successfully");
-        let studentdata = JSON.parse(data);
-        res.send(studentdata);
-    })
+   res.send(students);
     
 })
