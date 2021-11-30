@@ -20,7 +20,7 @@ app.get("/student/studentList", ( req, res) => {
         if(err) throw err;
         console.log("Read successfully");
         let studentdata = JSON.parse(data);
-        res.json(studentdata);
+        res.send(studentdata);
     })
     
 })
